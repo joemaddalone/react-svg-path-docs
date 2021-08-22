@@ -1,0 +1,3 @@
+[submodule "react-svg-path"]
+	path = react-svg-path
+	url = https://github.com/joemaddalone/react-svg-path.git
