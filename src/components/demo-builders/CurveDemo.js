@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as Shapes from 'react-svg-path';
-import docs from '../../docs/docs';
-import demoDocs from '../../docs/demos';
+import docs from '../../docs/docs.mjs';
+import demoDocs from '../../docs/demos.mjs';
 import { ComponentKnobs } from './ComponentKnobs';
 import { PathKnobs } from './PathKnobs';
 import { Tabs } from './Tabs';

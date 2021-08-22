@@ -208,11 +208,7 @@ const demos = {
       {
         svgDimensions: { ...basicSvgDimensions },
         size: 25,
-        shape: [
-          [1],
-          [1, 1],
-          [1]
-        ],
+        shape: [[1], [1, 1], [1]],
         sx: 10,
         sy: 0,
         lined: true

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { basicShapes, curves } from '../docs/docs';
+import { basicShapes, curves } from '../docs/docs.mjs';
 import { translate as t } from '../i18n/i18n';
 import './Nav.css';
 

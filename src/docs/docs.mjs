@@ -199,6 +199,10 @@ const docs = {
         isRequired: false,
         description: 'Draw inner lines or not.'
       }
+    },
+    shorthands: [shorthands.sxy],
+    nestingProps: ({ sx, sy }) => {
+      return { ex: sx, ey: sy, sx, sy };
     }
   },
   polygon: {

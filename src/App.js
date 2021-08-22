@@ -4,7 +4,7 @@ import {
   Route,
   NavLink
 } from 'react-router-dom';
-import { basicShapes, curves } from './docs/docs';
+import { basicShapes, curves } from './docs/docs.mjs';
 import { Nav } from './components/Nav';
 /** demo builders */
 import { BasicShapeDemo } from './components/demo-builders/BasicShapeDemo';

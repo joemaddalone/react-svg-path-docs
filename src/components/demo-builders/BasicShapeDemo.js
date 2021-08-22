@@ -3,9 +3,9 @@ import * as Shapes from 'react-svg-path';
 import { ComponentKnobs } from './ComponentKnobs';
 import { PathKnobs } from './PathKnobs';
 import { Tabs } from './Tabs';
-import { basicShapes as docs } from '../../docs/docs';
+import { basicShapes as docs } from '../../docs/docs.mjs';
 import { translate as t } from '../../i18n/i18n';
-import demoDocs from '../../docs/demos';
+import demoDocs from '../../docs/demos.mjs';
 
 import './BasicShapeDemo.css';
 

@@ -9,7 +9,7 @@ import {
   MarkerLine,
   MarkerSquare
 } from 'react-svg-path';
-import demos from '../../../docs/demos';
+import demos from '../../../docs/demos.mjs';
 import { translate as t } from '../../../i18n/i18n';
 
 import './MarkerDemo.css';
