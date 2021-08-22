@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { translate as t } from '../../i18n/i18n';
 
 export const TwoDArray = ({ label, value, pointLength, onChange }) => {
   const [points, setPoints] = useState(value || [[0, 0]]);
