@@ -56,7 +56,7 @@ export const Demos = () => {
           <div style={{ margin: 20, display: 'flex', flexDirection: 'column' }}>
             <DagNodes />
             <a
-              href='https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/dag/DagNodes.js'
+              href='https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/dag/DagNodes.js'
               rel='noopener noreferrer'
               target='_blank'
             >
@@ -67,7 +67,7 @@ export const Demos = () => {
         <div style={{ margin: 20, display: 'flex', flexDirection: 'column' }}>
           <Dimensions />
           <a
-            href='https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/Dimensions'
+            href='https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/Dimensions'
             rel='noopener noreferrer'
             target='_blank'
           >
@@ -78,7 +78,7 @@ export const Demos = () => {
         <div style={{ margin: 20, display: 'flex', flexDirection: 'column' }}>
           <Bars />
           <a
-            href='https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/Bars.js'
+            href='https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/Bars.js'
             rel='noopener noreferrer'
             target='_blank'
           >
@@ -88,7 +88,7 @@ export const Demos = () => {
         <div style={{ margin: 20, display: 'flex', flexDirection: 'column' }}>
           <TargetDemo />
           <a
-            href={`https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/targets`}
+            href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/targets`}
             rel='noopener noreferrer'
             target='_blank'
           >
@@ -105,7 +105,7 @@ export const Demos = () => {
             <Pie size={150} cx={80} cy={80} data={pieData} />
           </Svg>
           <a
-            href={`https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/Pie.js`}
+            href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/Pie.js`}
             rel='noopener noreferrer'
             target='_blank'
           >
@@ -117,7 +117,7 @@ export const Demos = () => {
             <Donut width={25} size={150} cx={80} cy={80} data={pieData} />
           </Svg>
           <a
-            href={`https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/Donut.js`}
+            href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/Donut.js`}
             rel='noopener noreferrer'
             target='_blank'
           >
@@ -145,7 +145,7 @@ export const Demos = () => {
         <div className='flex flex-column'>
           <SparkLine width={800} height={100} data={sparkData} />
           <a
-            href={`https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/SparkLine.js`}
+            href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/SparkLine.js`}
             rel='noopener noreferrer'
             target='_blank'
           >
@@ -154,7 +154,7 @@ export const Demos = () => {
         </div>
         <Football width={800} />
         <a
-          href={`https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/Football/Football.js`}
+          href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/Football/Football.js`}
           rel='noopener noreferrer'
           target='_blank'
         >
@@ -163,7 +163,7 @@ export const Demos = () => {
       </div>
       <Clock size={400} />
       <a
-        href={`https://github.com/joemaddalone/react-svg-path/blob/master/example/src/components/demos/complex/Clock.js`}
+        href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/example/src/components/demos/complex/Clock.js`}
         rel='noopener noreferrer'
         target='_blank'
       >
