@@ -1,0 +1,63 @@
+path.cell {
+  fill: #cbd5e0;
+  stroke: #fff;
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: none;
+}
+
+path.cell:hover {
+  stroke: #08d;
+  stroke-width: 2px;
+}
+
+path.diatomic-nonmetal {
+  fill: #faf089;
+}
+path.noble-gas {
+  fill: #fbd38d;
+}
+path.alkali-metal {
+  fill: #feb2b2;
+}
+path.alkaline-earth-metal {
+  fill: #7f9cf5;
+}
+path.metalloid {
+  fill: #90cdf4;
+}
+path.polyatomic-nonmetal {
+  fill: #81e6d9;
+}
+path.transition-metal {
+  fill: #9ae6b4;
+}
+path.post-transition-metal {
+  fill: #9ae6b4;
+}
+path.lanthanide {
+  fill: #fbb6ce;
+}
+path.actinide {
+  fill: #d6bcfa;
+}
+
+text {
+  pointer-events: none;
+  -webkit-user-select: none;
+}
+
+text.big {
+  font-weight: bold;
+  font-size: 200%;
+}
+
+text.small {
+  font-size: 100%;
+}
+
+text.middle {
+  dominant-baseline:middle;
+  text-anchor: middle;
+}
+
