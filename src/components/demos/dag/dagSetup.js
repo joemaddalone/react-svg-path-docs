@@ -1,4 +1,3 @@
-import dagre from "dagre";
 import ELK from "elkjs/lib/elk.bundled";
 
 const setupDag = async (dir = "DOWN", algo = "layered") => {
