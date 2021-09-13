@@ -53,6 +53,7 @@ export const Demos = () => {
       <p>{t("pages.demos.intro")}</p>
       <div>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+          <h4>Periodic table of elements</h4>
           <Elements />
           <a
             href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/Elements"
@@ -64,6 +65,7 @@ export const Demos = () => {
         </div>
         <div className="dag">
           <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+            <h4>Diagram</h4>
             <DagNodes />
             <a
               href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/dag/DagNodes.js"
@@ -75,6 +77,7 @@ export const Demos = () => {
           </div>
         </div>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+          <h4>Measurements</h4>
           <Dimensions />
           <a
             href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Dimensions"
@@ -86,6 +89,7 @@ export const Demos = () => {
         </div>
 
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+          <h4>Bar Chart</h4>
           <Bars />
           <a
             href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Bars.js"
@@ -96,6 +100,7 @@ export const Demos = () => {
           </a>
         </div>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+          <h4>Designs</h4>
           <TargetDemo />
           <a
             href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/targets`}
@@ -106,6 +111,7 @@ export const Demos = () => {
           </a>
         </div>
       </div>
+      <h4>Pie/Donut Charts</h4>
       <div
         className="complex flex items-center justify-around flex-wrap"
         style={{ maxWidth: 800, minHeight: 180 }}
@@ -152,6 +158,7 @@ export const Demos = () => {
         </Svg>
       </div>
       <div style={{ marginTop: 50 }} className="complex flex flex-column">
+        <h4>Line Chart</h4>
         <div className="flex flex-column">
           <SparkLine width={800} height={100} data={sparkData} />
           <a
@@ -162,6 +169,7 @@ export const Demos = () => {
             {t("common.source")}
           </a>
         </div>
+        <h4>NFL football field (to scale)</h4>
         <Football width={800} />
         <a
           href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Football/Football.js`}
@@ -171,6 +179,7 @@ export const Demos = () => {
           {t("common.source")}
         </a>
       </div>
+      <h4>Functioning clock</h4>
       <Clock size={400} />
       <a
         href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Clock.js`}

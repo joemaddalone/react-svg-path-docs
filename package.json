@@ -11,7 +11,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "d3-scale": "^4.0.0",
-    "dagre": "^0.8.5",
+    "elkjs": "^0.7.1",
     "i18next": "^20.4.0",
     "i18next-browser-languagedetector": "^6.1.2",
     "i18next-localstorage-cache": "^1.1.1",
