@@ -35,6 +35,7 @@ const Table = () => {
       width={w + margin}
       height={h + margin}
       scale
+      style={{maxWidth: 1200}}
       onMouseOver={() => setActive(null)}
     >
       <Rect {...summaryConfig} fill="none" stroke="#ccc">
@@ -49,7 +50,7 @@ const Table = () => {
               <h2>
                 {active.name} ({active.symbol})
               </h2>
-              <p>{active.summary}</p>
+              <p style={{fontSize: '125%'}}>{active.summary}</p>
             </div>
           </foreignObject>
         ) : (
@@ -68,6 +69,7 @@ const Table = () => {
               className={`cell ${value.category.replace(/ /g, "-")}`}
               cx={cx}
               cy={cy}
+              key={value}
               size={size * 0.95}
             >
               <Text className="big middle">{value.symbol}</Text>
