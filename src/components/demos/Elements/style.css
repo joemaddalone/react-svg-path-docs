@@ -42,7 +42,7 @@ path.actinide {
   fill: #d6bcfa;
 }
 
-text {
+text, .no-pointer {
   pointer-events: none;
   -webkit-user-select: none;
 }
@@ -57,7 +57,36 @@ text.small {
 }
 
 text.middle {
-  dominant-baseline:middle;
+  dominant-baseline: middle;
   text-anchor: middle;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.atom {
+  transform-origin: center;
+  fill: transparent;
+}
+
+.ring {
+  transform-origin: center;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-timing-delay: 0.25s;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.pointer {
+  cursor: pointer;
+}

@@ -84,7 +84,7 @@ body {
 .no-focus-outline a:focus,
 .no-focus-outline button:focus,
 .no-focus-outline div:focus,
-.no-focus-outline [role='button']:focus {
+.no-focus-outline [role="button"]:focus {
   outline: none;
 }
 
@@ -129,8 +129,6 @@ body {
 .nav-actuator {
   display: none;
 }
-
-
 
 .nav-actuator:hover path {
   stroke: yellow;
@@ -222,7 +220,6 @@ code {
   white-space: pre-wrap;
   unicode-bidi: embed;
   display: block;
-
 }
 
 path {
@@ -398,3 +395,4 @@ a:hover {
 .flex-shrink-1 {
   flex-shrink: 1;
 }
+
