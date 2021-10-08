@@ -1,5 +1,5 @@
 import React from "react";
-import Path, { Svg, Circle, Group, Rect } from "react-svg-path";
+import Path, { Circle, Group, Rect } from "react-svg-path";
 
 const Atom = ({ cx, cy, shells, circ = 350 }) => {
   const step = circ/shells.length
@@ -35,7 +35,7 @@ const Atom = ({ cx, cy, shells, circ = 350 }) => {
                 key={`${q}`}
                 cx={+p[0]}
                 cy={+p[1]}
-                size={6}
+                size={13}
                 fill="#20a0c1"
               />
             );

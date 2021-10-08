@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// import App from './App';
+import App from './components/demos/Elements';
 // eslint-disable-next-line no-unused-vars
 import i18n from './i18n/i18n';
 import './util/no-focus-event';

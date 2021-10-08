@@ -17,20 +17,14 @@ elements.forEach((e) => {
   grid[e.ypos][e.xpos] = e;
 });
 
-const cellSize = 100;
+const cellSize = 95;
 const cells = Path.positionByArray(cellSize, grid, 0, 0);
 const margin = 40;
 const w = 18 * cellSize;
 const h = 10 * cellSize;
 const modal = {
-  height: 800,
-  width: 800,
-};
-const summaryConfig = {
-  width: modal.width,
-  height: modal.height,
-  x: (w + margin) / 2 - modal.width / 2,
-  y: (h + margin) / 2 - modal.height / 2,
+  height: h - 100,
+  width: w / 2,
 };
 
 const Table = () => {
@@ -42,11 +36,6 @@ const Table = () => {
       scale
       style={{ maxWidth: 1200 }}
     >
-      <Rect width={0} height={0} cx={650} cy={200}>
-        <Text fill="#222" className="big middle">
-          The Periodic Table of Elements
-        </Text>
-      </Rect>
       <Group transform={`translate(${margin / 2}, ${margin / 2})`}>
         <Group>
           {cells.map(({ cx, cy, size, value }, index) => (
@@ -64,9 +53,8 @@ const Table = () => {
               key={value}
               size={size * 0.95}
             >
-              <Text className="big middle">{value.symbol}</Text>
-              <Text className="small middle" oy={25}>
-                {value.name}
+              <Text dy={10} className="big middle">
+                {value.symbol}
               </Text>
               <Text ox={-size / 2 + 10} oy={-size / 2 + 25} className="small">
                 {value.number}
@@ -81,22 +69,16 @@ const Table = () => {
           height={modal.height}
           close={() => setOpen(null)}
         >
-          <foreignObject
-            x={summaryConfig.x + 20}
-            y={summaryConfig.y + 40}
-            width={summaryConfig.width - 80}
-            height={summaryConfig.height}
-          >
-            <div xmlns="http://www.w3.org/1999/xhtml" style={{ color: "#000" }}>
-              <h2>
-                {open.name} ({open.symbol})
-              </h2>
-              <p style={{ fontSize: "125%" }}>{open.summary}</p>
-            </div>
-          </foreignObject>
-          <Group transform="translate(0, 80)">
-            <Atom circ={400} shells={open.shells} />
-            <Text className="middle"  transform="translate(0, 225)">
+          <Text className="middle big" oy={-350}>
+            {open.name} ({open.symbol})
+          </Text>
+          <Group transform="translate(0, 40)">
+            <Atom circ={500} shells={open.shells} />
+            <Text
+              className="middle"
+              style={{ fontSize: "175%" }}
+              transform="translate(0, 340)"
+            >
               Electron configuration of {open.name}
             </Text>
           </Group>
