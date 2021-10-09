@@ -34,7 +34,7 @@ const Table = () => {
       width={w + margin}
       height={h + margin}
       scale
-      style={{ maxWidth: 1200 }}
+      style={{ maxWidth: 850 }}
     >
       <Group transform={`translate(${margin / 2}, ${margin / 2})`}>
         <Group>

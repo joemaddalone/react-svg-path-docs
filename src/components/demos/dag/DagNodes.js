@@ -3,7 +3,7 @@ import Path, { Circle, Square, Svg, Text } from "react-svg-path";
 import dagSetup from "./dagSetup";
 import "./dag.css";
 
-const algorithms = ["layered", "stress", "mrtree", "force"];
+const algorithms = ["layered", "mrtree"];
 
 const DagNodes = () => {
   const [loading, setLoading] = React.useState(true);
@@ -49,10 +49,10 @@ const DagNodes = () => {
   } else {
     const squareNodes = data.children
       .slice(0, 5)
-      .map((s) => ({ ...s, x: s.x + 12.5, y: s.y + 12.5 }));
+      .map((s) => ({ ...s, x: s.x + 15, y: s.y + 15 }));
     const circleNodes = data.children
       .slice(5)
-      .map((s) => ({ ...s, x: s.x + 12.5, y: s.y + 12.5 }));
+      .map((s) => ({ ...s, x: s.x + 15, y: s.y + 15 }));
     return (
       <div>
         <div className="ui form">
@@ -82,7 +82,7 @@ const DagNodes = () => {
           width={data.width}
           height={data.height}
           scale
-          style={{ maxWidth: 1200 }}
+          style={{ maxWidth: 850 }}
         >
           <path stroke="#222" strokeWidth={1} d={createConnectors()} />
           {squareNodes.map(({ x, y, width }, index) => {

@@ -4,9 +4,9 @@ const setupDag = async (dir = "DOWN", algo = "layered") => {
   const elk = new ELK();
   const elkNodes = [];
   const elkLinks = [];
-  const items = "abcdefghijklmnopqrstuvwxyz".split("");
+  const items = "abcdefghjklmopqrstuvwxyz".split("");
   items.forEach((item) => {
-    elkNodes.push({ id: item, width: 25, height: 25 });
+    elkNodes.push({ id: item, width: 35, height: 24 });
   });
   items.forEach((item, index, arr) => {
     if (index === 0) {
@@ -15,11 +15,11 @@ const setupDag = async (dir = "DOWN", algo = "layered") => {
     
     if (index < 5) {
       elkLinks.push({ id: index, source: "a", target: item });
-    } else if (index < 9) {
+    } else if (index < 10) {
       elkLinks.push({ id: index, source: "b", target: item });
     } else if (index < 15) {
       elkLinks.push({ id: index, source: "c", target: item });
-    } else if (index < 19) {
+    } else if (index < 20) {
       elkLinks.push({ id: index, source: "d", target: item });
     } else {
       elkLinks.push({ id: index, source: "e", target: item });
@@ -35,7 +35,8 @@ const setupDag = async (dir = "DOWN", algo = "layered") => {
       "spacing.nodeNode": 35,
       'elk.stress.desiredEdgeLength': 100.0,
       'elk.stress.dimension': 'X',
-      'elk.layered.spacing.edgeNodeBetweenLayers': 5,
+      'elk.layered.spacing.edgeNodeBetweenLayers': 80,
+      'elk.layered.highDegreeNodes.treeHeight': 100,
     },
     children: elkNodes,
     edges: elkLinks,
