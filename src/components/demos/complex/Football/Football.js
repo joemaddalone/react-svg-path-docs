@@ -5,7 +5,7 @@ import './Football.css';
 const Football = ({ width }) => {
   const marginX = 50;
   const marginY = 50;
-  const canvasWidth = width || 800;
+  const canvasWidth = 850;
   const scale = canvasWidth / 360;
   const scaleUnit = "'";
   const scaleProps = {
@@ -36,7 +36,7 @@ const Football = ({ width }) => {
   };
 
   return (
-    <Svg width={canvasWidth + marginX} height={canvasHeight + marginY} scale>
+    <Svg width={canvasWidth + marginX} height={canvasHeight + marginY} style={{ maxWidth: 850, outline: 0 }} scale>
       <MarkerArrow id='arrow-marker' color='green' open />
       <g
         transform={`translate(${marginX / 2},${marginY / 2})`}
@@ -47,6 +47,7 @@ const Football = ({ width }) => {
           cy={field.height / 2}
           width={field.width}
           height={field.height}
+          fill="none"
         />
         {Array.from({ length: field.tickCount }).map((_, index) => {
           const sx = field.endzoneWidth + (field.playingWidth / 100) * index;
@@ -130,9 +131,9 @@ const Football = ({ width }) => {
         <Distance
           color='green'
           sx={field.width - field.endzoneWidth}
-          sy={0}
+          sy={25}
           ex={field.width}
-          ey={0}
+          ey={25}
           {...scaleProps}
           markers='arrow'
         />

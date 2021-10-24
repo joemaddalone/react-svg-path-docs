@@ -11,7 +11,7 @@
 .football-diagram path {
   vector-effect: non-scaling-stroke;
   shape-rendering: geometricPrecision;
-  fill: none;
+  /* fill: none; */
   stroke: #999;
   stroke-width: 1px;
 }

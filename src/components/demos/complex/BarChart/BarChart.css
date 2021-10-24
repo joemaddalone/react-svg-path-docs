@@ -1,0 +1,37 @@
+.bar-graph path {
+  transition: all 0.25s ease-in-out;
+}
+
+.bar-graph text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.bar-graph .btn {
+	fill: #fff;
+	cursor: pointer;
+	stroke: #222;
+}
+
+.bar-graph .btn.active {
+	fill: #ccc;
+}
+
+.bar-graph .btn-text {
+	fill: #222;
+}
+
+.bar-graph .btn:hover {
+	fill: #ccc;
+	cursor: pointer;
+}
+
+.bar-app-controls {
+  width: 500px;
+  height: 25px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

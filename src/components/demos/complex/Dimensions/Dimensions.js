@@ -3,7 +3,7 @@ import { Svg, Distance } from 'react-svg-path';
 import { Angle } from './Angle';
 
 const App = () => {
-  const size = 600;
+  const size = 850;
   const quarter = size * 0.25;
   return (
     <div>

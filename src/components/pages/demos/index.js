@@ -5,7 +5,7 @@ import DagNodes from "../../demos/dag/DagNodes";
 import Pie from "../../demos/complex/Pie";
 import Donut from "../../demos/complex/Donut";
 import SparkLine from "../../demos/complex/SparkLine";
-import Bars from "../../demos/complex/Bars";
+import BarChart from "../../demos/complex/BarChart/BarChart";
 import Football from "../../demos/complex/Football/Football";
 import Dimensions from "../../demos/complex/Dimensions/Dimensions";
 import TargetDemo from "../../demos/targets/TargetDemo";
@@ -40,6 +40,22 @@ export const Demos = () => {
     },
   ];
 
+  const barData = [
+    { val: 100, name: "A" },
+    { val: 200, name: "B" },
+    { val: 300, name: "C" },
+    { val: 425, name: "D" },
+    { val: 555, name: "E" },
+    { val: 150, name: "F" },
+    { val: 330, name: "G" },
+    { val: 340, name: "H" },
+    { val: 200, name: "I" },
+    { val: 600, name: "J" },
+    { val: 333, name: "K" },
+    { val: 78, name: "L" },
+    { val: 125, name: "M" },
+  ];
+
   const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -57,6 +73,17 @@ export const Demos = () => {
           <Elements />
           <a
             href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/Elements"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {t("common.source")}
+          </a>
+        </div>
+        <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+          <h4>Bar Chart</h4>
+          <BarChart data={barData} />
+          <a
+            href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/BarChart/BarChart.js"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -87,18 +114,6 @@ export const Demos = () => {
             {t("common.source")}
           </a>
         </div>
-
-        <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
-          <h4>Bar Chart</h4>
-          <Bars />
-          <a
-            href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Bars.js"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {t("common.source")}
-          </a>
-        </div>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
           <h4>Designs</h4>
           <TargetDemo />
@@ -109,6 +124,17 @@ export const Demos = () => {
           >
             {t("common.source")}
           </a>
+        </div>
+        <h4>NFL football field (to scale)</h4>
+        <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+        <Football width={850} />
+        <a
+          href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Football/Football.js`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {t("common.source")}
+        </a>
         </div>
       </div>
       <h4>Pie/Donut Charts</h4>
@@ -169,15 +195,6 @@ export const Demos = () => {
             {t("common.source")}
           </a>
         </div>
-        <h4>NFL football field (to scale)</h4>
-        <Football width={800} />
-        <a
-          href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Football/Football.js`}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {t("common.source")}
-        </a>
       </div>
       <h4>Functioning clock</h4>
       <Clock size={400} />

@@ -84,7 +84,7 @@ const DagNodes = () => {
           scale
           style={{ maxWidth: 850 }}
         >
-          <path stroke="#222" strokeWidth={1} d={createConnectors()} />
+          <path stroke="#222" strokeWidth={1.5} d={createConnectors()} />
           {squareNodes.map(({ x, y, width }, index) => {
             return (
               <Square

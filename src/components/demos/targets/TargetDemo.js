@@ -23,8 +23,8 @@ const TargetDemo = () => {
   };
 
   return (
-    <Svg width={500} height={400} className='bg-dark' scale>
-      <Group transform="translate(50, 50)">
+    <Svg width={850} height={400} className='bg-dark' style={{ maxWidth: 850 }} scale>
+      <Group transform="translate(225, 50)">
         <Target1 size={size} {...xy(0)} />
         <Target3 size={size} {...xy(1)} />
         <Target2 size={size} {...xy(2)} />

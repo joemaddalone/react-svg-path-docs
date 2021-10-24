@@ -163,11 +163,6 @@ path.merged {
   stroke: #222;
 }
 
-.dag path {
-  fill: none;
-  stroke-width: 0.5;
-}
-
 .basic-shapes path {
   shape-rendering: geometricPrecision;
 }
