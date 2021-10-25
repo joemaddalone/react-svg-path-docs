@@ -1,5 +1,5 @@
 import React from "react";
-import Path, { Svg, Group, RoundedSquare, Text, Rect } from "react-svg-path";
+import Path, { Svg, Group, RoundedSquare, Text } from "react-svg-path";
 import Atom from "./Atom";
 import Modal from "./Modal";
 import data from "./data.json";

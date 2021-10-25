@@ -1,65 +1,78 @@
-import React from 'react';
-import { Svg, Distance } from 'react-svg-path';
-import { Angle } from './Angle';
+import React from "react";
+import { Svg, Distance, Circle } from "react-svg-path";
 
 const App = () => {
-  const size = 850;
-  const quarter = size * 0.25;
+  const height = 450;
+  const width = 850;
+  const margin = 1;
+  const quarterHeight = height * 0.25;
+  const quarterWidth = width * 0.25;
   return (
     <div>
-      <Svg width={size} height={size} scale>
-        <Distance color='green' ex={size} ey={quarter * 2} markers='triangle' />
+      <Svg
+        width={width + margin}
+        height={height + margin}
+        scale
+        style={{ maxWidth: width + margin }}
+      >
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Circle
+            key={i}
+            size={70 * (i + (i * 2))}
+            fill="none"
+            stroke="#ddd"
+            strokeDasharray={4}
+          />
+        ))}
+
         <Distance
-          color='green'
-          ex={quarter * 2}
-          ey={size}
-          markerEnd='triangle'
+          color="green"
+          ex={width}
+          ey={quarterHeight * 2}
+          markers="triangle"
         />
         <Distance
-          color='orange'
-          ex={quarter * 2}
+          color="green"
+          ex={quarterWidth * 2}
+          ey={height}
+          markerEnd="triangle"
+        />
+        <Distance
+          color="orange"
+          ex={quarterWidth * 2}
           ey={0}
-          markerEnd='triangle'
-          text='CUSTOM TEXT'
+          markerEnd="triangle"
+          text="CUSTOM TEXT"
           dotted
         />
         <Distance
-          color='green'
-          sx={quarter}
+          color="green"
+          sx={quarterWidth}
           sy={0}
-          ex={quarter}
-          ey={size}
+          ex={quarterWidth}
+          ey={height}
           dotted
-          markers='arrow'
+          markers="arrow"
         />
-        <Distance color='green' ex={size} ey={0} markerEnd='triangle' />
-        <Distance color='green' ex={quarter} ey={quarter * 3} />
+        <Distance color="green" ex={width} ey={0} markerEnd="triangle" />
+        <Distance color="green" ex={quarterWidth} ey={quarterHeight * 3} />
         <Distance
-          color='red'
+          color="red"
           sx={0}
           sy={0}
-          ex={size}
-          ey={size}
-          markers='arrow'
+          ex={width}
+          ey={height}
+          markers="arrow"
         />
         <Distance
-          color='green'
-          sx={quarter}
-          sy={quarter * 3}
+          color="green"
+          sx={quarterWidth}
+          sy={quarterHeight * 3}
           ex={0}
-          ey={quarter * 3}
-          markerEnd='arrow'
-          markerStart='line'
+          ey={quarterHeight * 3}
+          markerEnd="arrow"
+          markerStart="line"
         />
-        <Angle size={100} startAngle={-135} endAngle={0} dotted />
-        <Angle
-          color='purple'
-          size={150}
-          startAngle={45}
-          endAngle={90}
-          markers='arrow'
-        />
-        <Angle cx={0} cy={size} size={75} startAngle={0} endAngle={90} dotted />
       </Svg>
     </div>
   );

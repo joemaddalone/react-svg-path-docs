@@ -1,5 +1,5 @@
 import React from "react";
-import { Group, Rect, SymX } from "react-svg-path";
+import { Rect, SymX } from "react-svg-path";
 
 const Modal = ({
   className,

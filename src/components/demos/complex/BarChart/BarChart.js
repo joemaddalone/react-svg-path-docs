@@ -1,4 +1,4 @@
-import { Svg, Line, Text } from "react-svg-path";
+import { Svg } from "react-svg-path";
 import Controls from "./Controls";
 import Frame from "./Frame";
 import Ticks from "./Ticks";
