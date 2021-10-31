@@ -1,9 +1,9 @@
 import { Line, Text } from "react-svg-path";
 
-const Bars = ({ values, width, height, yScale }) => {
+const Bars = ({ values, label, variable, width, height, yScale }) => {
   return (
     <>
-      {values.map(({ val, name }, index, arr) => {
+      {values.map((v, index, arr) => {
         const barCount = arr.length;
         const xStart = 50;
         const xSpace = width - xStart;
@@ -15,12 +15,12 @@ const Bars = ({ values, width, height, yScale }) => {
               sx={x}
               sy={height}
               ex={x}
-              ey={height - yScale(val)}
+              ey={height - yScale(v[variable])}
               strokeWidth={barWidth}
               stroke="rebeccapurple"
             />
             <Text fontSize="0.75em" x={x - 5} y={height + 20}>
-              {name}
+              {v[label]}
             </Text>
           </g>
         );

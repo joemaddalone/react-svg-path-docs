@@ -11,11 +11,14 @@
 .bar-graph .btn {
 	fill: #fff;
 	cursor: pointer;
-	stroke: #222;
 }
 
 .bar-graph .btn.active {
 	fill: #ccc;
+}
+
+.bar-graph .btn.active + text {
+	fill: rebeccapurple;
 }
 
 .bar-graph .btn-text {
