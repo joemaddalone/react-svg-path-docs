@@ -41,19 +41,19 @@ export const Demos = () => {
   ];
 
   const barData = [
-    { val: 100, name: "A" },
-    { val: 200, name: "B" },
-    { val: 300, name: "C" },
-    { val: 425, name: "D" },
-    { val: 555, name: "E" },
-    { val: 150, name: "F" },
-    { val: 330, name: "G" },
-    { val: 340, name: "H" },
-    { val: 200, name: "I" },
-    { val: 600, name: "J" },
-    { val: 333, name: "K" },
-    { val: 78, name: "L" },
-    { val: 125, name: "M" },
+    { val: 100, qty: 245, name: "A" },
+    { val: 200, qty: 200, name: "B" },
+    { val: 300, qty: 207, name: "C" },
+    { val: 425, qty: 350, name: "D" },
+    { val: 555, qty: 125, name: "E" },
+    { val: 150, qty: 50, name: "F" },
+    { val: 330, qty: 10, name: "G" },
+    { val: 340, qty: 75, name: "H" },
+    { val: 200, qty: 86, name: "I" },
+    { val: 600, qty: 100, name: "J" },
+    { val: 333, qty: 77, name: "K" },
+    { val: 78, qty: 20, name: "L" },
+    { val: 125, qty: 300, name: "M" },
   ];
 
   const getRandomInt = (min, max) => {
@@ -81,7 +81,7 @@ export const Demos = () => {
         </div>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
           <h4>Bar Chart</h4>
-          <BarChart data={barData} />
+          <BarChart data={barData} variables={['val', 'qty']} label="name" />
           <a
             href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/BarChart/BarChart.js"
             rel="noopener noreferrer"

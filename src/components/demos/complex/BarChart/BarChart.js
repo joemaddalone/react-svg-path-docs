@@ -1,5 +1,5 @@
-import { Svg } from "react-svg-path";
-import Controls from "./Controls";
+import { Svg, Rect, Text } from "react-svg-path";
+import SortControls from "./SortControls";
 import Frame from "./Frame";
 import Ticks from "./Ticks";
 import Bars from "./Bars";
@@ -7,18 +7,19 @@ import { scaleLinear } from "d3-scale";
 import { useState } from "react";
 import "./BarChart.css";
 
-const BarChart = ({ data }) => {
+const BarChart = ({ data, variables, label }) => {
   const [sorter, setSorter] = useState("alphaa");
+  const [currentVariable, setCurrentVariable] = useState(variables[1]);
   const sorters = {
-    alphaa: (a, b) => a.name.localeCompare(b.name),
-    alphad: (a, b) => b.name.localeCompare(a.name),
-    valuea: (a, b) => a.val - b.val,
-    valued: (a, b) => b.val - a.val,
+    alphaa: (a, b) => a[label].localeCompare(b[label]),
+    alphad: (a, b) => b[label].localeCompare(a[label]),
+    valuea: (a, b) => a[currentVariable] - b[currentVariable],
+    valued: (a, b) => b[currentVariable] - a[currentVariable],
   };
 
   const max = Math.max.apply(
     null,
-    data.map((o) => o.val)
+    data.map((o) => o[currentVariable])
   );
 
   const width = 850;
@@ -41,14 +42,39 @@ const BarChart = ({ data }) => {
         className="bar-graph"
       >
         <g transform={`translate(${margins.left}, ${margins.top})`}>
-          <Controls
+          <SortControls
             cx={225}
-            cy={0}
+            cy={20}
             width={width / 2}
             height={50}
             sorter={sorter}
             setSorter={setSorter}
           />
+          {/* quick and dirty variable controls - circle back and clean up */}
+          <Rect cx={800} cy={20} width={width / 2} height={50} fill="none">
+            <Rect
+              className={`btn ${currentVariable === variables[0] ? "active" : ""}`}
+              onClick={() => setCurrentVariable(variables[0])}
+              ox={-150}
+              width={75}
+              height={25}
+            >
+              <Text className="btn-text" fill="white">
+                data:{variables[0]}
+              </Text>
+            </Rect>
+            <Rect
+              className={`btn ${currentVariable === variables[1] ? "active" : ""}`}
+              onClick={() => setCurrentVariable(variables[1])}
+              ox={-75}
+              width={75}
+              height={25}
+            >
+              <Text className="btn-text" fill="white">
+                data:{variables[1]}
+              </Text>
+            </Rect>
+          </Rect>
           <Frame width={width} height={height} margins={margins} />
           <Ticks
             ticks={ticks}
@@ -58,6 +84,8 @@ const BarChart = ({ data }) => {
             yScale={yScale}
           />
           <Bars
+            variable={currentVariable}
+            label={label}
             values={sortedValues}
             yScale={yScale}
             width={width}
