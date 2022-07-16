@@ -81,7 +81,7 @@ export const Demos = () => {
         </div>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
           <h4>Bar Chart</h4>
-          <BarChart data={barData} variables={['val', 'qty']} label="name" />
+          <BarChart data={barData} variables={["val", "qty"]} label="name" />
           <a
             href="https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/BarChart/BarChart.js"
             rel="noopener noreferrer"
@@ -125,19 +125,21 @@ export const Demos = () => {
             {t("common.source")}
           </a>
         </div>
-        <h4>NFL football field (to scale)</h4>
         <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
-        <Football width={850} />
-        <a
-          href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Football/Football.js`}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {t("common.source")}
-        </a>
+          <h4>NFL football field (to scale)</h4>
+          <Football width={850} />
+          <a
+            href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Football/Football.js`}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {t("common.source")}
+          </a>
         </div>
       </div>
-      <h4>Pie/Donut Charts</h4>
+      <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+        <h4>Pie/Donut Charts</h4>
+      </div>
       <div
         className="complex flex items-center justify-around flex-wrap"
         style={{ maxWidth: 800, minHeight: 180 }}
@@ -183,7 +185,7 @@ export const Demos = () => {
           />
         </Svg>
       </div>
-      <div style={{ marginTop: 50 }} className="complex flex flex-column">
+      <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
         <h4>Line Chart</h4>
         <div className="flex flex-column">
           <SparkLine width={800} height={100} data={sparkData} />
@@ -196,15 +198,17 @@ export const Demos = () => {
           </a>
         </div>
       </div>
-      <h4>Functioning clock</h4>
-      <Clock size={400} />
-      <a
-        href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Clock.js`}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        {t("common.source")}
-      </a>
+      <div style={{ margin: 20, display: "flex", flexDirection: "column" }}>
+        <h4>Functioning clock</h4>
+        <Clock size={400} />
+        <a
+          href={`https://github.com/joemaddalone/react-svg-path-docs/blob/master/src/components/demos/complex/Clock.js`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {t("common.source")}
+        </a>
+      </div>
     </>
   );
 };

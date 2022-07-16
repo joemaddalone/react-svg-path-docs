@@ -43,15 +43,15 @@ const BarChart = ({ data, variables, label }) => {
       >
         <g transform={`translate(${margins.left}, ${margins.top})`}>
           <SortControls
-            cx={225}
-            cy={20}
+            cx={230}
+            cy={10}
             width={width / 2}
             height={50}
             sorter={sorter}
             setSorter={setSorter}
           />
           {/* quick and dirty variable controls - circle back and clean up */}
-          <Rect cx={800} cy={20} width={width / 2} height={50} fill="none">
+          <Rect cx={840} cy={10} width={width / 2} height={50} fill="none">
             <Rect
               className={`btn ${currentVariable === variables[0] ? "active" : ""}`}
               onClick={() => setCurrentVariable(variables[0])}

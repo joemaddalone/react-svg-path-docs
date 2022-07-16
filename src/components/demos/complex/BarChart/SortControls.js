@@ -4,46 +4,29 @@ const SortControls = ({ cx, cy, sorter, setSorter, width, height }) => {
     <g>
       <Rect cx={cx} cy={cy} width={width / 2} height={50} fill="none">
         <Rect
-          className={`btn ${sorter === "alphaa" ? "active" : ""}`}
-          onClick={() => setSorter("alphaa")}
+          className={`btn ${
+            sorter === "alphaa" || sorter === "alphad" ? "active" : ""
+          }`}
+          onClick={() => setSorter(sorter === "alphaa" ? "alphad" : "alphaa")}
           ox={-150}
-          width={75}
+          width={100}
           height={25}
         >
           <Text className="btn-text" fill="white">
-            LABEL ⬇
+            Sort Label
           </Text>
         </Rect>
         <Rect
-          className={`btn ${sorter === "alphad" ? "active" : ""}`}
-          onClick={() => setSorter("alphad")}
-          ox={-75}
-          width={75}
+          className={`btn ${
+            sorter === "valuea" || sorter === "valued" ? "active" : ""
+          }`}
+          onClick={() => setSorter(sorter === "valuea" ? "valued" : "valuea")}
+          ox={-50}
+          width={100}
           height={25}
         >
           <Text className="btn-text" fill="white">
-            LABEL ⬆
-          </Text>
-        </Rect>
-        <Rect
-          className={`btn ${sorter === "valuea" ? "active" : ""}`}
-          onClick={() => setSorter("valuea")}
-          width={75}
-          height={25}
-        >
-          <Text className="btn-text" fill="white">
-            DATA ⬆
-          </Text>
-        </Rect>
-        <Rect
-          className={`btn ${sorter === "valued" ? "active" : ""}`}
-          onClick={() => setSorter("valued")}
-          width={75}
-          ox={75}
-          height={25}
-        >
-          <Text className="btn-text" fill="white">
-            DATA ⬇
+          Sort Data
           </Text>
         </Rect>
       </Rect>

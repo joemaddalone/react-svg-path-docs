@@ -53,6 +53,35 @@ const Clock = ({ size = 400 }) => {
         <MarkerArrow id="marker-s" color="red" />
         <MarkerArrow id="marker-m" color="green" />
         <g transform={`translate(${margin / 2}, ${margin / 2})`}>
+        {hoursPoints.map((point, index) => {
+            return (
+              <Text
+                className="middle"
+                key={hours[index]}
+                x={point[0]}
+                y={point[1]}
+                fill="#333"
+                fontSize={`${fontBase}px`}
+              >
+                {hours[index]}
+              </Text>
+            );
+          })}
+          {minutePoints.map((point, index) => {
+            const m = index * 5;
+            return (
+              <Text
+                key={index}
+                x={point[0]}
+                y={point[1]}
+                className="middle"
+                fontSize={`${fontBase / 2}px`}
+                fill="red"
+              >
+                {m}
+              </Text>
+            );
+          })}
           <Circle size={size} cx={cx} cy={cy} strokeWidth={5}>
             <RadialLines
               innerSize={size * 0.725}
@@ -110,35 +139,6 @@ const Clock = ({ size = 400 }) => {
             stroke="red"
             {...degreeToAngle(state.second, 60, cx, cy, size * 0.45)}
           />
-          {hoursPoints.map((point, index) => {
-            return (
-              <Text
-                className="middle"
-                key={hours[index]}
-                x={point[0]}
-                y={point[1]}
-                fill="#333"
-                fontSize={`${fontBase}px`}
-              >
-                {hours[index]}
-              </Text>
-            );
-          })}
-          {minutePoints.map((point, index) => {
-            const m = index * 5;
-            return (
-              <Text
-                key={index}
-                x={point[0]}
-                y={point[1]}
-                className="middle"
-                fontSize={`${fontBase / 2}px`}
-                fill="red"
-              >
-                {m}
-              </Text>
-            );
-          })}
           <Circle cx={cx} cy={cy} size={10} fill="#fff" stroke="#222" />
         </g>
       </Svg>
