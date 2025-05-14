@@ -86,6 +86,21 @@
   "symI": {
     "description": "SymI draws an I shape from center point (cx & cy). The cursor is then moved to the center point."
   },
+  "symV": {
+    "description": "SymV draws a V shape from center point (cx & cy). The cursor is then moved to the center point."
+  },
+  "isocube": {
+    "description": "Isocube draws an isosceles cube from center point (cx & cy). The cursor is then moved to the center point."
+  },
+  "kite": {
+    "description": "Kite draws a kite shape from center point (cx & cy). The cursor is then moved to the center point."
+  },
+  "roundedSquare": {
+    "description": "RoundedSquare draws a rounded square from center point (cx & cy). The cursor is then moved to the center point."
+  },
+  "roundedRect": {
+    "description": "RoundedRect draws a rounded rectangle from center point (cx & cy). The cursor is then moved to the center point."
+  },
   "pages": {
     "introduction": {
       "title": "Introduction",
