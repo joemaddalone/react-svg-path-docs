@@ -127,19 +127,19 @@ export const MarkerDemo = () => {
         </code>
       </div>
       <div>
-        <h2>&lt;MarkerArrow></h2>
+        <h2>&lt;MarkerArrow&gt;</h2>
         <p dangerouslySetInnerHTML={{ __html: t('pages.markers.arrow') }} />
       </div>
       <div>
-        <h2>&lt;MarkerTriangle></h2>
+        <h2>&lt;MarkerTriangle&gt;</h2>
         <p dangerouslySetInnerHTML={{ __html: t('pages.markers.triangle') }} />
       </div>
       <div>
-        <h2>&lt;MarkerSquare></h2>
+        <h2>&lt;MarkerSquare&gt;</h2>
         <p dangerouslySetInnerHTML={{ __html: t('pages.markers.square') }} />
       </div>
       <div>
-        <h2>&lt;MarkerLine></h2>
+        <h2>&lt;MarkerLine&gt;</h2>
         <p dangerouslySetInnerHTML={{ __html: t('pages.markers.line') }} />
       </div>
     </>
